@@ -20,6 +20,7 @@ compile.log
 *.pdf
 *.pptx
 *.dvi
+*.svg
 
 # Local environments and editor state
 .venv/
