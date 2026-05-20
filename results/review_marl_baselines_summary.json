@@ -1,0 +1,149 @@
+[
+  {
+    "variant": "mappo_acoustic_no_shield",
+    "seeds": [
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.04616666666666667,
+        "outage_rate_mean": 0.41971703703703706,
+        "worst_agent_packet_mean": 0.6618505834206091,
+        "auv_collision_count_mean": 63.90133333333333,
+        "colregs_violation_rate_mean": 0.03700888888888889,
+        "shield_interventions_mean": 0.0,
+        "seed": "20260429"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.07272222222222222,
+        "outage_rate_mean": 0.7635294426891346,
+        "worst_agent_packet_mean": 0.2266026330529206,
+        "auv_collision_count_mean": 57.56133333333333,
+        "colregs_violation_rate_mean": 0.042568888888888885,
+        "shield_interventions_mean": 0.0,
+        "seed": "20260430"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.049055555555555554,
+        "outage_rate_mean": 0.5357305877616747,
+        "worst_agent_packet_mean": 0.39509932847834905,
+        "auv_collision_count_mean": 63.728,
+        "colregs_violation_rate_mean": 0.03596,
+        "shield_interventions_mean": 0.0,
+        "seed": "20260431"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0013333333333333335,
+        "task_completion_mean": 0.09216666666666666,
+        "outage_rate_mean": 0.6010285132672549,
+        "worst_agent_packet_mean": 0.4185125808013409,
+        "auv_collision_count_mean": 68.18133333333333,
+        "colregs_violation_rate_mean": 0.04505777777777778,
+        "shield_interventions_mean": 0.0,
+        "seed": "20260432"
+      }
+    ]
+  },
+  {
+    "variant": "mappo_acoustic_shield",
+    "seeds": [
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.042444444444444444,
+        "outage_rate_mean": 0.2895537037037037,
+        "worst_agent_packet_mean": 0.7127180310209265,
+        "auv_collision_count_mean": 2.1813333333333333,
+        "colregs_violation_rate_mean": 0.029586666666666667,
+        "shield_interventions_mean": 685.5066666666667,
+        "seed": "20260429"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.03911111111111111,
+        "outage_rate_mean": 0.2677833333333333,
+        "worst_agent_packet_mean": 0.7372074832355567,
+        "auv_collision_count_mean": 3.166666666666667,
+        "colregs_violation_rate_mean": 0.03299111111111111,
+        "shield_interventions_mean": 624.0306666666667,
+        "seed": "20260430"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0013333333333333335,
+        "task_completion_mean": 0.033,
+        "outage_rate_mean": 0.2936024718196457,
+        "worst_agent_packet_mean": 0.7072644314128828,
+        "auv_collision_count_mean": 2.498666666666667,
+        "colregs_violation_rate_mean": 0.04028,
+        "shield_interventions_mean": 619.044,
+        "seed": "20260431"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.028833333333333332,
+        "outage_rate_mean": 0.17894759259259257,
+        "worst_agent_packet_mean": 0.7904575647589439,
+        "auv_collision_count_mean": 2.604,
+        "colregs_violation_rate_mean": 0.04068444444444445,
+        "shield_interventions_mean": 505.168,
+        "seed": "20260432"
+      }
+    ]
+  },
+  {
+    "variant": "mappo_no_acoustic_shield",
+    "seeds": [
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.08538888888888889,
+        "outage_rate_mean": 0.49557,
+        "worst_agent_packet_mean": 0.4446682329884383,
+        "auv_collision_count_mean": 6.789333333333333,
+        "colregs_violation_rate_mean": 0.039884444444444445,
+        "shield_interventions_mean": 857.204,
+        "seed": "20260429"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.009333333333333334,
+        "task_completion_mean": 0.09172222222222222,
+        "outage_rate_mean": 0.4717118980293197,
+        "worst_agent_packet_mean": 0.5564184799422993,
+        "auv_collision_count_mean": 7.524,
+        "colregs_violation_rate_mean": 0.037863247863247865,
+        "shield_interventions_mean": 844.0333333333333,
+        "seed": "20260430"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.05133333333333333,
+        "outage_rate_mean": 0.3878522222222222,
+        "worst_agent_packet_mean": 0.6529655751416865,
+        "auv_collision_count_mean": 5.417333333333334,
+        "colregs_violation_rate_mean": 0.03613777777777778,
+        "shield_interventions_mean": 772.7653333333333,
+        "seed": "20260431"
+      },
+      {
+        "episodes": 350.0,
+        "success_mean": 0.0,
+        "task_completion_mean": 0.0955,
+        "outage_rate_mean": 0.4864759259259259,
+        "worst_agent_packet_mean": 0.5147148411516562,
+        "auv_collision_count_mean": 5.258666666666667,
+        "colregs_violation_rate_mean": 0.04418222222222222,
+        "shield_interventions_mean": 877.908,
+        "seed": "20260432"
+      }
+    ]
+  }
+]

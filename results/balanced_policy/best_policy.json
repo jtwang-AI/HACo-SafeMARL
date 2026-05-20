@@ -1,0 +1,13 @@
+{
+  "score": null,
+  "params": {
+    "relay_link_weight": 5,
+    "relay_task_mix": 0.42,
+    "usv_speed": 4.9,
+    "auv_task_speed": 1.82,
+    "auv_return_speed": 0.45,
+    "auv_link_speed": 1.35,
+    "link_pressure_gain": 0.42,
+    "packet_target": 0.8
+  }
+}

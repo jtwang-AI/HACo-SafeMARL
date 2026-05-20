@@ -1,0 +1,1402 @@
+[
+  {
+    "candidate": 0,
+    "score": 3.589048347199245,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 1,
+    "score": 3.513800399180014,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 2,
+    "score": 4.516758152953839,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 3,
+    "score": 2.759022174711459,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 4,
+    "score": 4.377082691412632,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 5,
+    "score": 3.68492442809067,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 6,
+    "score": 3.9299398862258217,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 7,
+    "score": 3.579662597764937,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 8,
+    "score": 3.179212617373413,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 9,
+    "score": 3.249610531667043,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 10,
+    "score": 3.549203916487497,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 11,
+    "score": 3.1476230031116166,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 12,
+    "score": 1.472233942421827,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 13,
+    "score": 2.9241172361835535,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 14,
+    "score": 2.62574522834773,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 15,
+    "score": 1.9071880295546717,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 16,
+    "score": 2.866105012101867,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 17,
+    "score": 3.1977586246835226,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 18,
+    "score": 2.137514556885574,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 19,
+    "score": 2.529609752839297,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.35,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 20,
+    "score": 4.197156841800245,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 21,
+    "score": 3.9887048303561787,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 22,
+    "score": 3.971083744320622,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 23,
+    "score": 3.8562935760880688,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.0,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 24,
+    "score": 3.9287412903250862,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 25,
+    "score": 4.291239466825601,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 26,
+    "score": 3.2415323850489686,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 27,
+    "score": 3.895981892813826,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.08,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 28,
+    "score": 3.3560958120494746,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 29,
+    "score": 3.5707036559754393,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 30,
+    "score": 2.9295998554698017,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 31,
+    "score": 3.4140073752432247,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.15,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 32,
+    "score": 2.4219758211194975,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 33,
+    "score": 2.4654865783679387,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 34,
+    "score": 2.8968498824450193,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 35,
+    "score": 2.887133533925759,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.25,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 36,
+    "score": 1.8836568906375295,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.7
+    }
+  },
+  {
+    "candidate": 37,
+    "score": 3.594038050814173,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.74
+    }
+  },
+  {
+    "candidate": 38,
+    "score": 2.0134350082690906,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.78
+    }
+  },
+  {
+    "candidate": 39,
+    "score": 2.4666442587918747,
+    "params": {
+      "relay_link_weight": 0.0,
+      "relay_task_mix": 0.45,
+      "usv_speed": 5.5,
+      "auv_task_speed": 1.95,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.1,
+      "link_pressure_gain": 0.35,
+      "packet_target": 0.8
+    }
+  },
+  {
+    "candidate": 40,
+    "score": 2.769855336785745,
+    "params": {
+      "relay_link_weight": 1.258460356269628,
+      "relay_task_mix": 0.4937975316201132,
+      "usv_speed": 5.395151980796306,
+      "auv_task_speed": 1.6549801134095203,
+      "auv_return_speed": 0.43463133017412503,
+      "auv_link_speed": 1.4506293301324997,
+      "link_pressure_gain": 0.11584394674207231,
+      "packet_target": 0.7362640812527524
+    }
+  },
+  {
+    "candidate": 41,
+    "score": 4.3728954133756694,
+    "params": {
+      "relay_link_weight": 3.4655515394392125,
+      "relay_task_mix": 0.46321492136916026,
+      "usv_speed": 5.959373900643795,
+      "auv_task_speed": 1.8393630106836827,
+      "auv_return_speed": 0.7882573784213813,
+      "auv_link_speed": 0.8434324363009738,
+      "link_pressure_gain": 0.2302757497537804,
+      "packet_target": 0.7065377241938575
+    }
+  },
+  {
+    "candidate": 42,
+    "score": 3.459103506054893,
+    "params": {
+      "relay_link_weight": 2.6128597625347614,
+      "relay_task_mix": 0.446380708490956,
+      "usv_speed": 5.110249542976418,
+      "auv_task_speed": 1.9951905793258362,
+      "auv_return_speed": 0.563249462556077,
+      "auv_link_speed": 1.0832008071084156,
+      "link_pressure_gain": 0.01565303106250099,
+      "packet_target": 0.7503481933583174
+    }
+  },
+  {
+    "candidate": 43,
+    "score": 2.6667883910648946,
+    "params": {
+      "relay_link_weight": 1.3963632629096452,
+      "relay_task_mix": 0.46034688527112744,
+      "usv_speed": 5.588165698297752,
+      "auv_task_speed": 1.6708391209498794,
+      "auv_return_speed": 0.41752242668971346,
+      "auv_link_speed": 0.8163946417750246,
+      "link_pressure_gain": 0.22728866558077818,
+      "packet_target": 0.7126718289651249
+    }
+  },
+  {
+    "candidate": 44,
+    "score": 2.991317454488011,
+    "params": {
+      "relay_link_weight": 0.8319271228903142,
+      "relay_task_mix": 0.5994167828086987,
+      "usv_speed": 5.987860603000084,
+      "auv_task_speed": 1.9403248847500476,
+      "auv_return_speed": 0.40643495154660464,
+      "auv_link_speed": 0.863056429610395,
+      "link_pressure_gain": 0.31234070438343764,
+      "packet_target": 0.7839306068134506
+    }
+  },
+  {
+    "candidate": 45,
+    "score": 1.3014536206870255,
+    "params": {
+      "relay_link_weight": 2.8051042222877474,
+      "relay_task_mix": 0.4222019785616416,
+      "usv_speed": 4.788905867994693,
+      "auv_task_speed": 1.6865418206341733,
+      "auv_return_speed": 0.4607368342027028,
+      "auv_link_speed": 1.3433476381319063,
+      "link_pressure_gain": 0.21348435847401112,
+      "packet_target": 0.7269728956983637
+    }
+  },
+  {
+    "candidate": 46,
+    "score": 1.1751480090878579,
+    "params": {
+      "relay_link_weight": 2.492886225344056,
+      "relay_task_mix": 0.4801635352741645,
+      "usv_speed": 5.9888180851241675,
+      "auv_task_speed": 1.6174538197143316,
+      "auv_return_speed": 0.6137339275877913,
+      "auv_link_speed": 1.258323660037311,
+      "link_pressure_gain": 0.14634238387910178,
+      "packet_target": 0.7378018287275887
+    }
+  },
+  {
+    "candidate": 47,
+    "score": 3.431029306761435,
+    "params": {
+      "relay_link_weight": 2.143901517112977,
+      "relay_task_mix": 0.6073891362431656,
+      "usv_speed": 5.194794004302585,
+      "auv_task_speed": 1.8708248405215562,
+      "auv_return_speed": 0.5527231768395309,
+      "auv_link_speed": 1.34199642342117,
+      "link_pressure_gain": 0.19306753010146027,
+      "packet_target": 0.7522619764441535
+    }
+  },
+  {
+    "candidate": 48,
+    "score": 4.101726021258253,
+    "params": {
+      "relay_link_weight": 2.7762345929979615,
+      "relay_task_mix": 0.47934265877198967,
+      "usv_speed": 5.810279306546576,
+      "auv_task_speed": 1.914430119958209,
+      "auv_return_speed": 0.6549432189098117,
+      "auv_link_speed": 0.9799619232841378,
+      "link_pressure_gain": 0.000195953720423786,
+      "packet_target": 0.7926484482696652
+    }
+  },
+  {
+    "candidate": 49,
+    "score": 2.695165240941014,
+    "params": {
+      "relay_link_weight": 1.1475725166229007,
+      "relay_task_mix": 0.491618481249422,
+      "usv_speed": 5.31762933883574,
+      "auv_task_speed": 1.6798261646564643,
+      "auv_return_speed": 0.5079357427157343,
+      "auv_link_speed": 1.4775715719209095,
+      "link_pressure_gain": 0.13268065627090658,
+      "packet_target": 0.7382167534126719
+    }
+  },
+  {
+    "candidate": 50,
+    "score": 3.648568491280789,
+    "params": {
+      "relay_link_weight": 3.5846157399493794,
+      "relay_task_mix": 0.4644831010213858,
+      "usv_speed": 4.563843684825173,
+      "auv_task_speed": 1.9596333456156552,
+      "auv_return_speed": 0.7607510251335303,
+      "auv_link_speed": 0.8409020090580744,
+      "link_pressure_gain": 0.17987304536884,
+      "packet_target": 0.7321774205555084
+    }
+  },
+  {
+    "candidate": 51,
+    "score": 2.5238054042689444,
+    "params": {
+      "relay_link_weight": 1.8186399575474645,
+      "relay_task_mix": 0.4664242244429719,
+      "usv_speed": 5.725677888545356,
+      "auv_task_speed": 1.9152287187998722,
+      "auv_return_speed": 0.37435595489733625,
+      "auv_link_speed": 1.1527149676156876,
+      "link_pressure_gain": 0.31517237971456974,
+      "packet_target": 0.713111372351764
+    }
+  },
+  {
+    "candidate": 52,
+    "score": 3.207419805094534,
+    "params": {
+      "relay_link_weight": 1.8163256117026187,
+      "relay_task_mix": 0.5588899940750861,
+      "usv_speed": 5.285858447322924,
+      "auv_task_speed": 1.8552227371140406,
+      "auv_return_speed": 0.74984250069424,
+      "auv_link_speed": 0.9341246735561513,
+      "link_pressure_gain": 0.09952549179983518,
+      "packet_target": 0.7509027784157006
+    }
+  },
+  {
+    "candidate": 53,
+    "score": 2.217602874286676,
+    "params": {
+      "relay_link_weight": 1.0602514401737362,
+      "relay_task_mix": 0.4951763139803298,
+      "usv_speed": 5.640191969394751,
+      "auv_task_speed": 1.7763162757372282,
+      "auv_return_speed": 0.37439715507671123,
+      "auv_link_speed": 1.1070622506745305,
+      "link_pressure_gain": 0.3471530341661584,
+      "packet_target": 0.7106124477161987
+    }
+  },
+  {
+    "candidate": 54,
+    "score": 3.127160065761103,
+    "params": {
+      "relay_link_weight": 3.8725616452226332,
+      "relay_task_mix": 0.5683782707841922,
+      "usv_speed": 5.143757302840529,
+      "auv_task_speed": 1.8668184276345547,
+      "auv_return_speed": 0.6630835160120355,
+      "auv_link_speed": 1.1157650503961407,
+      "link_pressure_gain": 0.21216901422299814,
+      "packet_target": 0.7511610459892525
+    }
+  },
+  {
+    "candidate": 55,
+    "score": 1.9222638496201596,
+    "params": {
+      "relay_link_weight": 2.618699898368951,
+      "relay_task_mix": 0.38364758494744405,
+      "usv_speed": 5.152790694315464,
+      "auv_task_speed": 1.8071471123778529,
+      "auv_return_speed": 0.4738929741765616,
+      "auv_link_speed": 1.4894693106526788,
+      "link_pressure_gain": 0.19676012092986456,
+      "packet_target": 0.817045024287128
+    }
+  },
+  {
+    "candidate": 56,
+    "score": 3.650597845664163,
+    "params": {
+      "relay_link_weight": 0.6178349059324564,
+      "relay_task_mix": 0.4572805227145334,
+      "usv_speed": 5.131421686906645,
+      "auv_task_speed": 1.8642514522588,
+      "auv_return_speed": 0.627090664437497,
+      "auv_link_speed": 0.8487863941376569,
+      "link_pressure_gain": 0.24351941173038996,
+      "packet_target": 0.7606307213627147
+    }
+  },
+  {
+    "candidate": 57,
+    "score": 3.7198469640533927,
+    "params": {
+      "relay_link_weight": 1.2893221935017372,
+      "relay_task_mix": 0.4204182620072131,
+      "usv_speed": 5.439619145482814,
+      "auv_task_speed": 1.6560721703497423,
+      "auv_return_speed": 0.3676643507206172,
+      "auv_link_speed": 0.8617261922610566,
+      "link_pressure_gain": 0.026392031083616544,
+      "packet_target": 0.705281934822058
+    }
+  },
+  {
+    "candidate": 58,
+    "score": 2.010812533250577,
+    "params": {
+      "relay_link_weight": 3.4047368033624523,
+      "relay_task_mix": 0.564792350541291,
+      "usv_speed": 5.346536032666163,
+      "auv_task_speed": 1.7510791969278452,
+      "auv_return_speed": 0.32760947923019934,
+      "auv_link_speed": 0.86933216588233,
+      "link_pressure_gain": 0.15772770661683316,
+      "packet_target": 0.811335203356768
+    }
+  },
+  {
+    "candidate": 59,
+    "score": 2.4982446303575947,
+    "params": {
+      "relay_link_weight": 2.443264526047318,
+      "relay_task_mix": 0.6294077554703418,
+      "usv_speed": 5.894342472225169,
+      "auv_task_speed": 1.7370400779165318,
+      "auv_return_speed": 0.6858044431130608,
+      "auv_link_speed": 1.3674343049066822,
+      "link_pressure_gain": 0.07370844943402921,
+      "packet_target": 0.7331253780403792
+    }
+  },
+  {
+    "candidate": 60,
+    "score": 2.4039881722013057,
+    "params": {
+      "relay_link_weight": 1.2488560454334996,
+      "relay_task_mix": 0.3931683754118451,
+      "usv_speed": 5.5376240300556425,
+      "auv_task_speed": 1.8756383103705678,
+      "auv_return_speed": 0.5515391363448761,
+      "auv_link_speed": 0.9896705533483489,
+      "link_pressure_gain": 0.22293214671264056,
+      "packet_target": 0.7483134317981126
+    }
+  },
+  {
+    "candidate": 61,
+    "score": 1.6574743939711003,
+    "params": {
+      "relay_link_weight": 3.7919447053260122,
+      "relay_task_mix": 0.6153583179002468,
+      "usv_speed": 5.5637059563642355,
+      "auv_task_speed": 1.7247030557209313,
+      "auv_return_speed": 0.3004927512671897,
+      "auv_link_speed": 1.05637687972614,
+      "link_pressure_gain": 0.3220891424091464,
+      "packet_target": 0.8084604482745692
+    }
+  },
+  {
+    "candidate": 62,
+    "score": 1.8885103236146359,
+    "params": {
+      "relay_link_weight": 1.9107265797862967,
+      "relay_task_mix": 0.5441080850991564,
+      "usv_speed": 5.054292092890084,
+      "auv_task_speed": 1.8320532310966051,
+      "auv_return_speed": 0.4279485291169977,
+      "auv_link_speed": 1.169994726781142,
+      "link_pressure_gain": 0.27074049264616024,
+      "packet_target": 0.7385220418455007
+    }
+  },
+  {
+    "candidate": 63,
+    "score": 2.174469274695448,
+    "params": {
+      "relay_link_weight": 3.701609629496631,
+      "relay_task_mix": 0.4519243903633188,
+      "usv_speed": 5.375276813054796,
+      "auv_task_speed": 1.856422734904317,
+      "auv_return_speed": 0.4617718309644052,
+      "auv_link_speed": 0.9389398500500608,
+      "link_pressure_gain": 0.3140704311161671,
+      "packet_target": 0.799506298283384
+    }
+  },
+  {
+    "candidate": 64,
+    "score": 1.4094684923088576,
+    "params": {
+      "relay_link_weight": 2.1711995496869436,
+      "relay_task_mix": 0.36141284902718274,
+      "usv_speed": 4.512403372221387,
+      "auv_task_speed": 1.6844472311329803,
+      "auv_return_speed": 0.5858196396441404,
+      "auv_link_speed": 1.0227692596085172,
+      "link_pressure_gain": 0.053042320710443014,
+      "packet_target": 0.8061042066846861
+    }
+  },
+  {
+    "candidate": 65,
+    "score": 2.4326437135349415,
+    "params": {
+      "relay_link_weight": 2.728912058625548,
+      "relay_task_mix": 0.6363214393045529,
+      "usv_speed": 4.925408244414662,
+      "auv_task_speed": 1.8569490229501269,
+      "auv_return_speed": 0.5110814205210197,
+      "auv_link_speed": 0.9647962758397539,
+      "link_pressure_gain": 0.2976949705040405,
+      "packet_target": 0.7425742901478604
+    }
+  },
+  {
+    "candidate": 66,
+    "score": 2.8716147884893317,
+    "params": {
+      "relay_link_weight": 0.6906991784415477,
+      "relay_task_mix": 0.4518785156226557,
+      "usv_speed": 5.176147478628204,
+      "auv_task_speed": 1.8675528388593725,
+      "auv_return_speed": 0.513566402942621,
+      "auv_link_speed": 1.275446503573167,
+      "link_pressure_gain": 0.08350440886616617,
+      "packet_target": 0.7666722611435163
+    }
+  },
+  {
+    "candidate": 67,
+    "score": 3.7345907621164827,
+    "params": {
+      "relay_link_weight": 1.8894029317635561,
+      "relay_task_mix": 0.477627045630294,
+      "usv_speed": 5.74029287130109,
+      "auv_task_speed": 1.6255716267919298,
+      "auv_return_speed": 0.5164067403478564,
+      "auv_link_speed": 1.4463055126426818,
+      "link_pressure_gain": 0.09205718362408036,
+      "packet_target": 0.720704774954055
+    }
+  },
+  {
+    "candidate": 68,
+    "score": 1.5792843026974428,
+    "params": {
+      "relay_link_weight": 2.288605887843048,
+      "relay_task_mix": 0.6448982829917731,
+      "usv_speed": 4.943067507309522,
+      "auv_task_speed": 1.7043872216238114,
+      "auv_return_speed": 0.46244605803129996,
+      "auv_link_speed": 1.109814632320427,
+      "link_pressure_gain": 0.16598125335997344,
+      "packet_target": 0.793055856091311
+    }
+  },
+  {
+    "candidate": 69,
+    "score": 3.3043210865112047,
+    "params": {
+      "relay_link_weight": 1.6858769499526658,
+      "relay_task_mix": 0.355473301391889,
+      "usv_speed": 5.073581765891143,
+      "auv_task_speed": 1.9209993975373374,
+      "auv_return_speed": 0.5933538624837333,
+      "auv_link_speed": 0.9531686022969578,
+      "link_pressure_gain": 0.00774652700366149,
+      "packet_target": 0.7128419174613165
+    }
+  },
+  {
+    "candidate": 70,
+    "score": 3.3918935825716865,
+    "params": {
+      "relay_link_weight": 2.9836252829981516,
+      "relay_task_mix": 0.5608895278829567,
+      "usv_speed": 5.696618578660313,
+      "auv_task_speed": 1.6428883634328415,
+      "auv_return_speed": 0.36329439948282194,
+      "auv_link_speed": 0.9306136761029438,
+      "link_pressure_gain": 0.025473173550245774,
+      "packet_target": 0.7090368030778826
+    }
+  },
+  {
+    "candidate": 71,
+    "score": 2.29250102393377,
+    "params": {
+      "relay_link_weight": 1.4160210169086596,
+      "relay_task_mix": 0.4708866100652139,
+      "usv_speed": 4.794520314276565,
+      "auv_task_speed": 1.7269375101902087,
+      "auv_return_speed": 0.49643296278575444,
+      "auv_link_speed": 1.070475552319639,
+      "link_pressure_gain": 0.2298787453969888,
+      "packet_target": 0.8187860381365296
+    }
+  },
+  {
+    "candidate": 72,
+    "score": 3.199840849048449,
+    "params": {
+      "relay_link_weight": 3.948624622474846,
+      "relay_task_mix": 0.4268769077623251,
+      "usv_speed": 4.9202793580360975,
+      "auv_task_speed": 1.8904226524393726,
+      "auv_return_speed": 0.46507518737137266,
+      "auv_link_speed": 0.9026732013301979,
+      "link_pressure_gain": 0.0998354640817945,
+      "packet_target": 0.7446808916422012
+    }
+  },
+  {
+    "candidate": 73,
+    "score": 2.317731109107321,
+    "params": {
+      "relay_link_weight": 1.2869079191799364,
+      "relay_task_mix": 0.43954623012842275,
+      "usv_speed": 5.79541296604169,
+      "auv_task_speed": 1.7875184992233788,
+      "auv_return_speed": 0.6918950953170458,
+      "auv_link_speed": 1.4242078127357058,
+      "link_pressure_gain": 0.2377284452136167,
+      "packet_target": 0.7180268285883904
+    }
+  },
+  {
+    "candidate": 74,
+    "score": 2.8772748713429106,
+    "params": {
+      "relay_link_weight": 3.1669814975982784,
+      "relay_task_mix": 0.512475137031502,
+      "usv_speed": 5.7664312142086835,
+      "auv_task_speed": 1.7390846735930614,
+      "auv_return_speed": 0.7053685762459613,
+      "auv_link_speed": 1.4591735413961262,
+      "link_pressure_gain": 0.16030095176265688,
+      "packet_target": 0.7297666149705329
+    }
+  },
+  {
+    "candidate": 75,
+    "score": 3.6602952988390505,
+    "params": {
+      "relay_link_weight": 2.6016220378214396,
+      "relay_task_mix": 0.40147676665724896,
+      "usv_speed": 4.621245600632734,
+      "auv_task_speed": 1.8304009513167385,
+      "auv_return_speed": 0.5562131282055716,
+      "auv_link_speed": 1.298759669177135,
+      "link_pressure_gain": 0.13419300923620703,
+      "packet_target": 0.7779605603196471
+    }
+  },
+  {
+    "candidate": 76,
+    "score": 1.902862985800947,
+    "params": {
+      "relay_link_weight": 0.3056805795014852,
+      "relay_task_mix": 0.38489717448441374,
+      "usv_speed": 5.329974545520819,
+      "auv_task_speed": 1.6652812980910632,
+      "auv_return_speed": 0.5363701315714211,
+      "auv_link_speed": 1.3289234234121385,
+      "link_pressure_gain": 0.019610866222720246,
+      "packet_target": 0.7065416368722915
+    }
+  },
+  {
+    "candidate": 77,
+    "score": 2.703776584385753,
+    "params": {
+      "relay_link_weight": 1.9856943249324073,
+      "relay_task_mix": 0.5254544859961637,
+      "usv_speed": 5.408065703735196,
+      "auv_task_speed": 1.8971958592935254,
+      "auv_return_speed": 0.7230863976708963,
+      "auv_link_speed": 0.9812441369437672,
+      "link_pressure_gain": 0.335451285747739,
+      "packet_target": 0.7765769930687797
+    }
+  },
+  {
+    "candidate": 78,
+    "score": 3.4333126447493694,
+    "params": {
+      "relay_link_weight": 2.7658557636850634,
+      "relay_task_mix": 0.5750356605455668,
+      "usv_speed": 5.970778143334265,
+      "auv_task_speed": 1.6293217185828355,
+      "auv_return_speed": 0.42827923121910927,
+      "auv_link_speed": 1.2826692924767042,
+      "link_pressure_gain": 0.03775071589929298,
+      "packet_target": 0.7920584511234583
+    }
+  },
+  {
+    "candidate": 79,
+    "score": 2.970560315732599,
+    "params": {
+      "relay_link_weight": 3.9667417505178038,
+      "relay_task_mix": 0.4894500410879648,
+      "usv_speed": 5.483557901401042,
+      "auv_task_speed": 1.7021971187820053,
+      "auv_return_speed": 0.5817498386698395,
+      "auv_link_speed": 1.4324273014064972,
+      "link_pressure_gain": 0.08579343464623948,
+      "packet_target": 0.747852723689406
+    }
+  },
+  {
+    "candidate": 80,
+    "score": 3.070074885354693,
+    "params": {
+      "relay_link_weight": 3.816885045307438,
+      "relay_task_mix": 0.48557046941519294,
+      "usv_speed": 5.052366517793833,
+      "auv_task_speed": 1.8145584022364032,
+      "auv_return_speed": 0.6883858734629223,
+      "auv_link_speed": 1.2954578721583663,
+      "link_pressure_gain": 0.035477776610581754,
+      "packet_target": 0.7239109777292898
+    }
+  },
+  {
+    "candidate": 81,
+    "score": 3.7343871717334802,
+    "params": {
+      "relay_link_weight": 2.688697463871464,
+      "relay_task_mix": 0.3978595322740298,
+      "usv_speed": 4.732631361329891,
+      "auv_task_speed": 1.8512630605178364,
+      "auv_return_speed": 0.4062563058990034,
+      "auv_link_speed": 0.8671878012924934,
+      "link_pressure_gain": 0.034657203748543294,
+      "packet_target": 0.7449942688409745
+    }
+  },
+  {
+    "candidate": 82,
+    "score": 2.437198069482864,
+    "params": {
+      "relay_link_weight": 0.11842873240832041,
+      "relay_task_mix": 0.544848306283546,
+      "usv_speed": 4.827476274475702,
+      "auv_task_speed": 1.9074651110177312,
+      "auv_return_speed": 0.7333567390958462,
+      "auv_link_speed": 1.3808444171139787,
+      "link_pressure_gain": 0.24919667405300516,
+      "packet_target": 0.8098558448670838
+    }
+  },
+  {
+    "candidate": 83,
+    "score": 2.136319636419015,
+    "params": {
+      "relay_link_weight": 0.9520084755331548,
+      "relay_task_mix": 0.5303005872659763,
+      "usv_speed": 5.97812957672628,
+      "auv_task_speed": 1.8314568248413245,
+      "auv_return_speed": 0.3368314328750682,
+      "auv_link_speed": 1.1864241516144698,
+      "link_pressure_gain": 0.29499052568275835,
+      "packet_target": 0.7231024336469055
+    }
+  },
+  {
+    "candidate": 84,
+    "score": 1.5833326161977683,
+    "params": {
+      "relay_link_weight": 2.4468918319930975,
+      "relay_task_mix": 0.4738454914567802,
+      "usv_speed": 4.718389636716951,
+      "auv_task_speed": 1.774306871747711,
+      "auv_return_speed": 0.5363070028985373,
+      "auv_link_speed": 0.8710910797092992,
+      "link_pressure_gain": 0.23757013609511438,
+      "packet_target": 0.7329857509409949
+    }
+  },
+  {
+    "candidate": 85,
+    "score": 3.923054858590695,
+    "params": {
+      "relay_link_weight": 3.240551035270207,
+      "relay_task_mix": 0.5539532281969748,
+      "usv_speed": 5.286668887163008,
+      "auv_task_speed": 1.8044680458592506,
+      "auv_return_speed": 0.4011194286933216,
+      "auv_link_speed": 1.0324492536815881,
+      "link_pressure_gain": 0.08444910342737735,
+      "packet_target": 0.7809520054966061
+    }
+  },
+  {
+    "candidate": 86,
+    "score": 2.724435504029909,
+    "params": {
+      "relay_link_weight": 2.1241639410852677,
+      "relay_task_mix": 0.4117736057404844,
+      "usv_speed": 5.891782501236705,
+      "auv_task_speed": 1.764268914203564,
+      "auv_return_speed": 0.38109742989289314,
+      "auv_link_speed": 0.9136584621419737,
+      "link_pressure_gain": 0.2642448057826699,
+      "packet_target": 0.7183403321429066
+    }
+  },
+  {
+    "candidate": 87,
+    "score": 2.376095727333053,
+    "params": {
+      "relay_link_weight": 2.483029539134239,
+      "relay_task_mix": 0.4768605586297644,
+      "usv_speed": 5.027142073055394,
+      "auv_task_speed": 1.6421971854643627,
+      "auv_return_speed": 0.6123018251336274,
+      "auv_link_speed": 1.0478735536936037,
+      "link_pressure_gain": 0.11862873538874967,
+      "packet_target": 0.7539707658232669
+    }
+  },
+  {
+    "candidate": 88,
+    "score": 2.920765554971708,
+    "params": {
+      "relay_link_weight": 1.932577547076507,
+      "relay_task_mix": 0.5514149312205437,
+      "usv_speed": 5.051805554775342,
+      "auv_task_speed": 1.9961306538712906,
+      "auv_return_speed": 0.4555296061887532,
+      "auv_link_speed": 1.0615679502555082,
+      "link_pressure_gain": 0.22097613522110254,
+      "packet_target": 0.7871312452665726
+    }
+  },
+  {
+    "candidate": 89,
+    "score": 3.6337251251521963,
+    "params": {
+      "relay_link_weight": 0.301793615190737,
+      "relay_task_mix": 0.5039788033410735,
+      "usv_speed": 5.603530501691376,
+      "auv_task_speed": 1.899783726757896,
+      "auv_return_speed": 0.5556298179640056,
+      "auv_link_speed": 1.003960118769603,
+      "link_pressure_gain": 0.053357739343056154,
+      "packet_target": 0.8100742541484062
+    }
+  },
+  {
+    "candidate": 90,
+    "score": 0.9790677839087293,
+    "params": {
+      "relay_link_weight": 2.491785834646341,
+      "relay_task_mix": 0.40533735176128866,
+      "usv_speed": 5.084138915582667,
+      "auv_task_speed": 1.6569204575276715,
+      "auv_return_speed": 0.4580248740331363,
+      "auv_link_speed": 1.381745380340416,
+      "link_pressure_gain": 0.30118400234718173,
+      "packet_target": 0.8055102112490783
+    }
+  },
+  {
+    "candidate": 91,
+    "score": 3.1063669137093437,
+    "params": {
+      "relay_link_weight": 3.541510581021903,
+      "relay_task_mix": 0.5136850410166796,
+      "usv_speed": 5.718202269053785,
+      "auv_task_speed": 1.671419207401742,
+      "auv_return_speed": 0.31193116343728083,
+      "auv_link_speed": 1.2627623828861494,
+      "link_pressure_gain": 0.1379794176619517,
+      "packet_target": 0.7846791185085971
+    }
+  },
+  {
+    "candidate": 92,
+    "score": 2.457035209966544,
+    "params": {
+      "relay_link_weight": 3.6915973006629015,
+      "relay_task_mix": 0.5920738687283185,
+      "usv_speed": 5.796026154790965,
+      "auv_task_speed": 1.6671606728799664,
+      "auv_return_speed": 0.7834274293731122,
+      "auv_link_speed": 0.8718301317268629,
+      "link_pressure_gain": 0.21320405723030375,
+      "packet_target": 0.8030125916444267
+    }
+  },
+  {
+    "candidate": 93,
+    "score": 1.9868298337078794,
+    "params": {
+      "relay_link_weight": 3.066375864749833,
+      "relay_task_mix": 0.5826327447515719,
+      "usv_speed": 5.710959749385077,
+      "auv_task_speed": 1.936255476508987,
+      "auv_return_speed": 0.43554256005784725,
+      "auv_link_speed": 0.8771841469765598,
+      "link_pressure_gain": 0.2622279572842724,
+      "packet_target": 0.7817581475847991
+    }
+  },
+  {
+    "candidate": 94,
+    "score": 1.6037123209951658,
+    "params": {
+      "relay_link_weight": 1.8362193322722242,
+      "relay_task_mix": 0.36226162359066183,
+      "usv_speed": 5.493243667678717,
+      "auv_task_speed": 1.809750842700703,
+      "auv_return_speed": 0.40047363916388556,
+      "auv_link_speed": 1.4086470607947899,
+      "link_pressure_gain": 0.20944575913587957,
+      "packet_target": 0.7808616587707502
+    }
+  },
+  {
+    "candidate": 95,
+    "score": 3.6087475103455935,
+    "params": {
+      "relay_link_weight": 0.47190837971592625,
+      "relay_task_mix": 0.5318791804493856,
+      "usv_speed": 4.899596454365714,
+      "auv_task_speed": 1.7946747262745246,
+      "auv_return_speed": 0.3954701035473314,
+      "auv_link_speed": 1.1444623204926068,
+      "link_pressure_gain": 0.10109859577369001,
+      "packet_target": 0.7290444800857815
+    }
+  },
+  {
+    "candidate": 96,
+    "score": 2.7580788160464014,
+    "params": {
+      "relay_link_weight": 0.8424319121813468,
+      "relay_task_mix": 0.530573348252889,
+      "usv_speed": 4.726034889182068,
+      "auv_task_speed": 1.6401970701217687,
+      "auv_return_speed": 0.35974896222595143,
+      "auv_link_speed": 0.9705977061303436,
+      "link_pressure_gain": 0.1931077400049679,
+      "packet_target": 0.7613999040127442
+    }
+  },
+  {
+    "candidate": 97,
+    "score": 2.527080327236281,
+    "params": {
+      "relay_link_weight": 0.519147516975278,
+      "relay_task_mix": 0.35656740336254794,
+      "usv_speed": 4.7093856200859,
+      "auv_task_speed": 1.6131694460495187,
+      "auv_return_speed": 0.6989008146104336,
+      "auv_link_speed": 1.182989709158888,
+      "link_pressure_gain": 0.22259478073028957,
+      "packet_target": 0.8079276327075697
+    }
+  },
+  {
+    "candidate": 98,
+    "score": 3.916611423816725,
+    "params": {
+      "relay_link_weight": 2.7948270119006904,
+      "relay_task_mix": 0.372500285051454,
+      "usv_speed": 5.313704482503923,
+      "auv_task_speed": 1.7535028980837584,
+      "auv_return_speed": 0.5325000178770825,
+      "auv_link_speed": 1.3658599175375399,
+      "link_pressure_gain": 0.34098314880266956,
+      "packet_target": 0.8153932091805453
+    }
+  },
+  {
+    "candidate": 99,
+    "score": 3.393211463253497,
+    "params": {
+      "relay_link_weight": 2.8389613970120657,
+      "relay_task_mix": 0.6490225656085693,
+      "usv_speed": 4.719961484970371,
+      "auv_task_speed": 1.9872678057567907,
+      "auv_return_speed": 0.729733372388646,
+      "auv_link_speed": 1.4960946003148972,
+      "link_pressure_gain": 0.15585169609169428,
+      "packet_target": 0.7558499898267221
+    }
+  }
+]

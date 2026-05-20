@@ -1,0 +1,6 @@
+import runpy
+import sys
+
+if __name__ == "__main__":
+    sys.path.insert(0, "code")
+    runpy.run_path("code/run_pilot_experiments.py", run_name="__main__")

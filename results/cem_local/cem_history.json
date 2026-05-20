@@ -1,0 +1,122 @@
+[
+  {
+    "generation": 0,
+    "best_score": -0.9140720781487719,
+    "mean_score": -3.624331994190271,
+    "best_params": {
+      "relay_link_weight": 8.291391369876099,
+      "relay_task_mix": 0.5426947413131927,
+      "usv_speed": 4.094199131490002,
+      "auv_task_speed": 1.6870088591515306,
+      "auv_return_speed": 0.8943466587856561,
+      "auv_link_speed": 1.2689036528934519,
+      "link_pressure_gain": 0.7070432405732712,
+      "packet_target": 0.7590999434962734
+    }
+  },
+  {
+    "generation": 1,
+    "best_score": -1.2313052629140027,
+    "mean_score": -3.98961680452877,
+    "best_params": {
+      "relay_link_weight": 6.052626374277014,
+      "relay_task_mix": 0.4072921099968086,
+      "usv_speed": 5.43867777439431,
+      "auv_task_speed": 1.7671209709964302,
+      "auv_return_speed": 0.8731122895906991,
+      "auv_link_speed": 1.1161842690600274,
+      "link_pressure_gain": 0.6094115480080894,
+      "packet_target": 0.8178292456956302
+    }
+  },
+  {
+    "generation": 2,
+    "best_score": 0.6303200794515063,
+    "mean_score": -3.324369443358369,
+    "best_params": {
+      "relay_link_weight": 5.4272997951789845,
+      "relay_task_mix": 0.34804131609979294,
+      "usv_speed": 4.68837336653163,
+      "auv_task_speed": 1.7254982439355242,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.7621814571916323,
+      "link_pressure_gain": 0.683066239586676,
+      "packet_target": 0.823374441877072
+    }
+  },
+  {
+    "generation": 3,
+    "best_score": -0.6440869856875643,
+    "mean_score": -3.3596222816582273,
+    "best_params": {
+      "relay_link_weight": 6.54834820284782,
+      "relay_task_mix": 0.36637519554324566,
+      "usv_speed": 4.450578596260838,
+      "auv_task_speed": 1.7395355666410117,
+      "auv_return_speed": 0.7198968064058607,
+      "auv_link_speed": 1.3449836503502162,
+      "link_pressure_gain": 0.6502772875377153,
+      "packet_target": 0.8174878010162477
+    }
+  },
+  {
+    "generation": 4,
+    "best_score": -1.1113990901385777,
+    "mean_score": -3.308225109598343,
+    "best_params": {
+      "relay_link_weight": 6.818076223161818,
+      "relay_task_mix": 0.39891609337511513,
+      "usv_speed": 4.621951906231299,
+      "auv_task_speed": 1.6768873988302433,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.4736288877578234,
+      "link_pressure_gain": 0.6419323036585138,
+      "packet_target": 0.8124346508535709
+    }
+  },
+  {
+    "generation": 5,
+    "best_score": -1.4726457729302977,
+    "mean_score": -3.580275602589078,
+    "best_params": {
+      "relay_link_weight": 5.211193874726917,
+      "relay_task_mix": 0.4117239589139564,
+      "usv_speed": 3.560937967341543,
+      "auv_task_speed": 1.6910625743194783,
+      "auv_return_speed": 0.3,
+      "auv_link_speed": 1.3392061091940055,
+      "link_pressure_gain": 0.5903921840612294,
+      "packet_target": 0.8322375584152922
+    }
+  },
+  {
+    "generation": 6,
+    "best_score": -0.8308484250124956,
+    "mean_score": -3.831229424293351,
+    "best_params": {
+      "relay_link_weight": 5.830632753816937,
+      "relay_task_mix": 0.39176214677869786,
+      "usv_speed": 3.750301651572712,
+      "auv_task_speed": 1.7591773625348763,
+      "auv_return_speed": 0.5448540684530644,
+      "auv_link_speed": 1.4690745222854589,
+      "link_pressure_gain": 0.6363843704769948,
+      "packet_target": 0.8245538088915219
+    }
+  },
+  {
+    "generation": 7,
+    "best_score": 0.16272744207842374,
+    "mean_score": -3.4501609192719074,
+    "best_params": {
+      "relay_link_weight": 6.3153187617823905,
+      "relay_task_mix": 0.3162260787983763,
+      "usv_speed": 3.866796458986275,
+      "auv_task_speed": 1.765451939980902,
+      "auv_return_speed": 0.39037316189231963,
+      "auv_link_speed": 1.5541586510613894,
+      "link_pressure_gain": 0.5667640937982539,
+      "packet_target": 0.8291064246946388
+    }
+  }
+]

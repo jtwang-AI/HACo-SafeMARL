@@ -1,0 +1,25 @@
+{
+  "policy_name": "mappo_acoustic_no_shield",
+  "use_acoustic": true,
+  "use_acoustic_reward": true,
+  "use_shield": false,
+  "seed": 20260429,
+  "scenarios": [
+    "survey",
+    "traffic",
+    "acoustic_degradation",
+    "emergency"
+  ],
+  "eval_scenarios": [
+    "survey",
+    "traffic",
+    "acoustic_degradation",
+    "emergency",
+    "generalization"
+  ],
+  "generalization_auvs": [
+    2,
+    6,
+    8
+  ]
+}

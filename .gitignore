@@ -1,0 +1,57 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+compile.log
+
+# Manuscript and editable document artifacts are kept local for this release.
+*.tex
+*.pdf
+*.pptx
+*.dvi
+
+# Local environments and editor state
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Generated archives and submission bundles
+*.zip
+*.tar
+*.tar.gz
+dist/
+local_experiment_package/
+paper/
+submission/
+tables/
+
+# Third-party reference PDFs kept locally only.
+/基于*.pdf
+
+# Local drafting notes not included in the code/data release.
+/EXPERIMENT_PROTOCOL_*.md
+/FULL_MARL_FORMULATION_*.md
+/LITERATURE_EXPANSION_*.md
+/MANIFEST.md
+/METHOD_BLUEPRINT_*.md
+/NARRATIVE_REPORT_*.md
+/PAPER_PLAN*.md
+/RESEARCH_REVIEW_*.md
+
+# Model checkpoints can be regenerated from scripts.
+*.pt
+*.pth
+
+# Keep source, metrics, tables, figures, and manuscript files tracked.
