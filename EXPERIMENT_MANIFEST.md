@@ -20,8 +20,6 @@
 
 ## Generated Artifacts Included in This Repository
 
-- Emergency rescue animation: `figures/emergency_rescue_animation.svg`
-- Framework diagram SVG: `figures/framework.svg`
 - Framework preview image: `figures/framework_from_pptx_preview.png`
 - Refined framework preview image: `figures/framework_standalone_refined.png`
 - Review-driven MAPPO diagnostic summary: `results/review_marl_baselines_summary.json`
