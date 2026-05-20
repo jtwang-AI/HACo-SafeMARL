@@ -10,7 +10,7 @@ HACo-SafeMARL 是一个面向 **USV-AUV 异构协同路径规划** 的可复现�
 - `code/haco/`：核心环境、控制器、实验工具和 PyTorch 策略实现。
 - `scripts/`：GPU 与远程实验运行脚本。
 - `results/`：原始 episode 表、聚合指标、训练历史和运行配置。
-- `figures/`：生成的非 LaTeX 图表文件，例如 SVG 和 PNG。
+- `figures/`：生成的非 LaTeX 图表文件，例如 PNG。
 - `EXPERIMENT_MANIFEST.md`：已完成实验、复现命令和结果说明。
 
 ## 环境安装
@@ -59,29 +59,3 @@ PYTHONPATH=code python3 code/evaluate_policy_params.py \
 PYTHONPATH=code python3 code/summarize_remote_review_experiments.py \
   --root results/review_marl_baselines
 ```
-
-## 结果说明
-
-本仓库中的实验主要用于验证：
-
-- 声学观测和声学奖励是否能改善最弱 AUV 链路的通信质量；
-- safety shield 是否能显著降低水下碰撞；
-- MAPPO 作为可复现的 CTDE 优化器和诊断载体，而不是论文的核心算法创新；
-- 主要贡献在于将声学物理建模、异构图策略学习、约束优化和显式安全屏蔽结合到 USV-AUV 协同规划框架中。
-
-## 发布范围
-
-本仓库有意排除了以下内容：
-
-- 论文 PDF；
-- LaTeX 源文件；
-- 投稿材料；
-- 模型 checkpoint；
-- 第三方参考文献 PDF；
-- 临时压缩包和编译缓存。
-
-该仓库定位为 **代码、数据、生成图表和实验结果发布包**。
-
-## 许可
-
-正式公开发布前，请根据目标期刊、课题组或机构要求补充最终 License。
