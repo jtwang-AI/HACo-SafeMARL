@@ -17,6 +17,20 @@
 - Task-priority preference evaluation: `results/task_priority_policy/`
   - Command: `PYTHONPATH=code python3 code/search_task_priority_policy.py --search-episodes 3 --eval-episodes 40 --grid-candidates 40 --random-candidates 60 --out results/task_priority_policy`
   - Output: 1680 episode records from remote server `happy`.
+- Four-seed graph-attention MAPPO (100 BC epochs/100 PPO updates): `results/mappo_multiseed_100/`
+  - Evaluation: 350 held-out episodes per seed across seven scenario/team-size cells.
+  - Result: success `0.00±0.00`, task `0.04±0.01`, outage `0.27±0.04`, worst packet `0.72±0.04`.
+- Four-seed mean-aggregation MAPPO ablation (100 BC epochs/100 PPO updates): `results/review_marl_baselines/mappo_no_gat_acoustic_shield/`
+  - Evaluation: 350 held-out episodes per seed across seven scenario/team-size cells.
+  - Result: success `0.00±0.00`, task `0.08±0.02`, outage `0.30±0.05`, worst packet `0.71±0.04`, AUV penetrations `3.8±0.3`.
+  - The matched graph-attention repeat has task/outage/worst packet/AUV penetrations `0.04±0.01 / 0.26±0.05 / 0.74±0.04 / 2.6±0.4`; attention is not broadly dominant.
+- Reviewer-revision analysis: `results/reviewer_revision/`
+  - Paired bootstrap CIs and sign-flip tests over 280 matched episodes per comparison.
+  - Shield/raw-policy audit and mission-outcome decomposition.
+  - TDMA/stale-observation sensitivity and crossing-stress/dynamics-current sensitivity.
+- Same-actor shield replay: `results/review_same_actor_shield_replay/`
+  - Shielded: outage `0.26±0.07`, worst packet `0.74±0.04`, AUV penetrations `2.3±0.4`.
+  - Raw actions from identical actors: outage `0.56±0.10`, worst packet `0.52±0.11`, AUV penetrations `65.7±5.6`.
 
 ## Generated Artifacts Included in This Repository
 
@@ -74,6 +88,7 @@ domain structure matters:
 - MAPPO + acoustic features/reward + shield
 - MAPPO without acoustic observations/reward + shield
 - MAPPO + acoustic features/reward without shield
+- MAPPO + acoustic features/reward + shield with mean AUV aggregation (no graph attention)
 
 MADQN is intentionally excluded because the environment uses continuous USV/AUV
 actions; discretizing actions would introduce an unfair and low-value baseline.
@@ -84,10 +99,33 @@ Run the focused remote package:
 ./scripts/run_remote_review_experiments.sh
 ```
 
-The script writes:
+The remote scripts write:
 
 - `results/review_marl_baselines/*/seed_*/`
 - `results/review_marl_baselines_summary.json`
+
+Run the matched non-attention baseline on four GPUs:
+
+```bash
+./scripts/run_no_gat_baseline_parallel.sh
+```
+
+Generate the statistical and robustness revision package:
+
+```bash
+PYTHONPATH=code python3 code/review_revision_experiments.py \
+  --policy results/cem_local/best_policy.json \
+  --main-episodes results/final_eval_local40/episode_metrics.csv \
+  --episodes 40 --out results/reviewer_revision --table-dir tables
+```
+
+Replay the identical trained graph-attention actor with and without the shield:
+
+```bash
+./scripts/run_checkpoint_shield_replay_parallel.sh
+PYTHONPATH=code python3 code/summarize_checkpoint_shield_replay.py \
+  --root results/review_same_actor_shield_replay
+```
 
 Use this diagnostic as evidence that the domain structure matters. The main
 claim should remain acoustic-communication-aware safe USV-AUV planning, not

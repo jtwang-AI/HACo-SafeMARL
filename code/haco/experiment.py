@@ -6,6 +6,8 @@ from pathlib import Path
 from statistics import mean, pstdev
 from typing import Iterable
 
+import numpy as np
+
 from haco.env import HACoPilotEnv, ScenarioConfig, summarize_episode
 from haco.policies import policy_suite
 
@@ -22,6 +24,27 @@ def scenario_config(name: str, seed: int, num_auvs: int = 3) -> ScenarioConfig:
         return ScenarioConfig(**base, acoustic_range=460.0, noise_level=0.22, dropout_bias=0.12, traffic=True, emergency=True)
     if name == "generalization":
         return ScenarioConfig(**base, acoustic_range=500.0, noise_level=0.18, dropout_bias=0.08, traffic=True, num_obstacles=12)
+    if name == "colregs_stress":
+        return ScenarioConfig(
+            **base,
+            noise_level=0.15,
+            dropout_bias=0.05,
+            traffic=True,
+            num_surface_vessels=8,
+            encounter_stress=True,
+        )
+    if name == "dynamics_current":
+        return ScenarioConfig(
+            **base,
+            noise_level=0.18,
+            dropout_bias=0.08,
+            traffic=True,
+            usv_time_constant=8.0,
+            auv_time_constant=4.0,
+            max_usv_turn_rate=np.deg2rad(6.0),
+            max_auv_turn_rate=np.deg2rad(12.0),
+            current_speed=0.5,
+        )
     raise ValueError(f"unknown scenario {name}")
 
 
@@ -101,7 +124,7 @@ def write_latex_table(path: Path, agg_rows):
     lines = [
         "\\begin{tabular}{llrrrrr}",
         "\\toprule",
-        "Scenario & Method & Success $\\uparrow$ & Task $\\uparrow$ & Outage $\\downarrow$ & Worst pkt $\\uparrow$ & COLREGs $\\downarrow$ \\\\",
+        "Scenario & Method & Success $\\uparrow$ & Task $\\uparrow$ & Outage $\\downarrow$ & Worst pkt $\\uparrow$ & Crossing $\\downarrow$ \\\\",
         "\\midrule",
     ]
     for scenario in ["survey", "traffic", "acoustic_degradation"]:

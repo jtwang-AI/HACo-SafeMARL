@@ -21,6 +21,12 @@ class ScenarioConfig:
     dropout_bias: float = 0.0
     traffic: bool = True
     emergency: bool = False
+    encounter_stress: bool = False
+    usv_time_constant: float = 0.0
+    auv_time_constant: float = 0.0
+    max_usv_turn_rate: float = float("inf")
+    max_auv_turn_rate: float = float("inf")
+    current_speed: float = 0.0
     scenario_name: str = "survey"
 
 
@@ -44,6 +50,38 @@ def _clip_norm(vec: np.ndarray, max_norm: float) -> np.ndarray:
     return vec / norm * max_norm
 
 
+def _first_order_velocity(
+    previous: np.ndarray,
+    command: np.ndarray,
+    dt: float,
+    time_constant: float,
+    max_turn_rate: float,
+) -> np.ndarray:
+    """Apply an optional first-order actuator lag and heading-rate limit.
+
+    A zero time constant and infinite turn rate recover the original kinematic
+    simulator exactly. The nonzero settings are used only for robustness
+    sensitivity experiments; they are not a full hydrodynamic vehicle model.
+    """
+    if time_constant <= 0.0:
+        candidate = command.copy()
+    else:
+        alpha = 1.0 - np.exp(-dt / time_constant)
+        candidate = previous + alpha * (command - previous)
+    if not np.isfinite(max_turn_rate):
+        return candidate
+    prev_speed = float(np.linalg.norm(previous))
+    cand_speed = float(np.linalg.norm(candidate))
+    if prev_speed < 1e-9 or cand_speed < 1e-9:
+        return candidate
+    prev_angle = float(np.arctan2(previous[1], previous[0]))
+    cand_angle = float(np.arctan2(candidate[1], candidate[0]))
+    delta = (cand_angle - prev_angle + np.pi) % (2.0 * np.pi) - np.pi
+    limited = np.clip(delta, -max_turn_rate * dt, max_turn_rate * dt)
+    angle = prev_angle + limited
+    return cand_speed * np.array([np.cos(angle), np.sin(angle)])
+
+
 class HACoPilotEnv:
     """A lightweight, deterministic-by-seed simulator for USV-AUV studies.
 
@@ -57,8 +95,10 @@ class HACoPilotEnv:
         self.t = 0
         self.usv_pos = np.zeros(2)
         self.usv_prev_action = np.zeros(2)
+        self.usv_velocity = np.zeros(2)
         self.auv_pos = np.zeros((cfg.num_auvs, 2))
         self.auv_prev_action = np.zeros((cfg.num_auvs, 2))
+        self.auv_velocity = np.zeros((cfg.num_auvs, 2))
         self.auv_depth = np.zeros(cfg.num_auvs)
         self.tasks = np.zeros((cfg.num_auvs, 2))
         self.task_done = np.zeros(cfg.num_auvs, dtype=bool)
@@ -66,6 +106,7 @@ class HACoPilotEnv:
         self.vessel_pos = np.zeros((cfg.num_surface_vessels, 2))
         self.vessel_vel = np.zeros((cfg.num_surface_vessels, 2))
         self.energy = 0.0
+        self.current_velocity = np.zeros(2)
         self.shield_interventions = 0
         self.reset()
 
@@ -75,6 +116,7 @@ class HACoPilotEnv:
         center = c.world_size / 2.0
         self.usv_pos = np.array([center, center], dtype=float)
         self.usv_prev_action = np.zeros(2)
+        self.usv_velocity = np.zeros(2)
         angles = np.linspace(0, 2 * np.pi, c.num_auvs, endpoint=False)
         radius = 180.0
         self.auv_pos = np.column_stack(
@@ -82,6 +124,7 @@ class HACoPilotEnv:
         )
         self.auv_pos += self.rng.normal(0, 30, size=self.auv_pos.shape)
         self.auv_prev_action = np.zeros((c.num_auvs, 2))
+        self.auv_velocity = np.zeros((c.num_auvs, 2))
         self.auv_depth = self.rng.uniform(60.0, 180.0, size=c.num_auvs)
         self.tasks = self.rng.uniform(250.0, c.world_size - 250.0, size=(c.num_auvs, 2))
         self.task_done[:] = False
@@ -96,8 +139,17 @@ class HACoPilotEnv:
         headings = self.rng.uniform(0, 2 * np.pi, size=c.num_surface_vessels)
         speeds = self.rng.uniform(1.0, 3.5, size=c.num_surface_vessels)
         self.vessel_vel = np.column_stack([np.cos(headings), np.sin(headings)]) * speeds[:, None]
+        if c.encounter_stress and c.num_surface_vessels:
+            encounter_angles = np.linspace(0.0, 2.0 * np.pi, c.num_surface_vessels, endpoint=False)
+            radius = min(420.0, c.world_size * 0.24)
+            direction = np.column_stack([np.cos(encounter_angles), np.sin(encounter_angles)])
+            tangent = np.column_stack([-np.sin(encounter_angles), np.cos(encounter_angles)])
+            self.vessel_pos = center + radius * direction
+            self.vessel_vel = -3.2 * direction + 0.65 * tangent
         if not c.traffic:
             self.vessel_vel[:] = 0.0
+        current_angle = self.rng.uniform(0.0, 2.0 * np.pi)
+        self.current_velocity = c.current_speed * np.array([np.cos(current_angle), np.sin(current_angle)])
         self.energy = 0.0
         self.shield_interventions = 0
         return self.observe()
@@ -112,6 +164,7 @@ class HACoPilotEnv:
             "obstacles": self.obstacles.copy(),
             "vessel_pos": self.vessel_pos.copy(),
             "vessel_vel": self.vessel_vel.copy(),
+            "current_velocity": self.current_velocity.copy(),
             "packet_probs": self.packet_probs(),
         }
 
@@ -175,8 +228,31 @@ class HACoPilotEnv:
             auv_actions = np.array([_clip_norm(a, 2.0) for a in auv_actions])
 
         prev_task_dist = np.linalg.norm(self.auv_pos - self.tasks, axis=1)
-        self.usv_pos = np.clip(self.usv_pos + usv_action * c.dt, 0.0, c.world_size)
-        self.auv_pos = np.clip(self.auv_pos + auv_actions * c.dt, 0.0, c.world_size)
+        self.usv_velocity = _first_order_velocity(
+            self.usv_velocity, usv_action, c.dt, c.usv_time_constant, c.max_usv_turn_rate
+        )
+        self.auv_velocity = np.vstack(
+            [
+                _first_order_velocity(
+                    self.auv_velocity[i],
+                    auv_actions[i],
+                    c.dt,
+                    c.auv_time_constant,
+                    c.max_auv_turn_rate,
+                )
+                for i in range(c.num_auvs)
+            ]
+        )
+        self.usv_pos = np.clip(
+            self.usv_pos + (self.usv_velocity + 0.25 * self.current_velocity) * c.dt,
+            0.0,
+            c.world_size,
+        )
+        self.auv_pos = np.clip(
+            self.auv_pos + (self.auv_velocity + self.current_velocity[None, :]) * c.dt,
+            0.0,
+            c.world_size,
+        )
         self.vessel_pos = (self.vessel_pos + self.vessel_vel * c.dt) % c.world_size
         if c.emergency and self.t > c.steps // 2:
             self.auv_depth[0] = min(280.0, self.auv_depth[0] + 0.2 * c.dt)
@@ -196,13 +272,19 @@ class HACoPilotEnv:
         colregs_violation = False
         for p, v in zip(self.vessel_pos, self.vessel_vel):
             rel = p - self.usv_pos
-            if np.linalg.norm(rel) < 160.0 and np.cross(np.append(usv_action, 0.0), np.append(rel, 0.0))[2] > 0:
+            if np.linalg.norm(rel) < 160.0 and np.cross(np.append(self.usv_velocity, 0.0), np.append(rel, 0.0))[2] > 0:
                 colregs_violation = True
-        energy = float(np.linalg.norm(usv_action) ** 2 + 0.5 * np.sum(np.linalg.norm(auv_actions, axis=1) ** 2))
-        smoothness = float(np.linalg.norm(usv_action - self.usv_prev_action) + np.sum(np.linalg.norm(auv_actions - self.auv_prev_action, axis=1)))
+        energy = float(
+            np.linalg.norm(self.usv_velocity) ** 2
+            + 0.5 * np.sum(np.linalg.norm(self.auv_velocity, axis=1) ** 2)
+        )
+        smoothness = float(
+            np.linalg.norm(self.usv_velocity - self.usv_prev_action)
+            + np.sum(np.linalg.norm(self.auv_velocity - self.auv_prev_action, axis=1))
+        )
         self.energy += energy
-        self.usv_prev_action = usv_action.copy()
-        self.auv_prev_action = auv_actions.copy()
+        self.usv_prev_action = self.usv_velocity.copy()
+        self.auv_prev_action = self.auv_velocity.copy()
         self.shield_interventions += interventions
         self.t += 1
         done = self.t >= c.steps or bool(np.all(self.task_done))

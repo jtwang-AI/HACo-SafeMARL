@@ -68,9 +68,11 @@ run_variant() {
 # 1. MAPPO with acoustic features/reward and shield.
 # 2. MAPPO without acoustic observations/reward, still shielded.
 # 3. MAPPO with acoustic observations/reward but without shield.
-# MADQN is intentionally excluded because the environment uses continuous actions.
+# 4. Standard mean-aggregation MAPPO without learned graph attention.
+# MADQN/QMIX are intentionally excluded because the environment uses continuous actions.
 run_variant "mappo_acoustic_shield" "mappo_acoustic_shield"
 run_variant "mappo_no_acoustic_shield" "mappo_no_acoustic_shield" --no-acoustic-features --no-acoustic-reward
 run_variant "mappo_acoustic_no_shield" "mappo_acoustic_no_shield" --disable-shield
+run_variant "mappo_no_gat_acoustic_shield" "mappo_no_gat_acoustic_shield" --no-graph-attention
 
 python code/summarize_remote_review_experiments.py --root "$ROOT_OUT"

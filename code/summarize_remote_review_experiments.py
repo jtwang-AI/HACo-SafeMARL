@@ -13,7 +13,7 @@ METRICS = [
     ("outage_rate_mean", "Outage"),
     ("worst_agent_packet_mean", "Worst pkt"),
     ("auv_collision_count_mean", "AUV coll."),
-    ("colregs_violation_rate_mean", "COLREGs"),
+    ("colregs_violation_rate_mean", "Crossing"),
     ("shield_interventions_mean", "Shield"),
 ]
 
@@ -66,13 +66,14 @@ def main() -> None:
     lines = [
         r"\begin{tabular}{lrrrrrrr}",
         r"\toprule",
-        r"Remote MARL variant & Success $\uparrow$ & Task $\uparrow$ & Outage $\downarrow$ & Worst pkt $\uparrow$ & AUV coll. $\downarrow$ & COLREGs $\downarrow$ & Shield $\downarrow$ \\",
+        r"MAPPO variant & Success $\uparrow$ & Task $\uparrow$ & Outage $\downarrow$ & Worst pkt $\uparrow$ & AUV coll. $\downarrow$ & Crossing $\downarrow$ & Shield $\downarrow$ \\",
         r"\midrule",
     ]
     labels = {
         "mappo_acoustic_shield": "MAPPO + acoustic + shield",
         "mappo_no_acoustic_shield": "MAPPO w/o acoustic + shield",
         "mappo_acoustic_no_shield": "MAPPO + acoustic w/o shield",
+        "mappo_no_gat_acoustic_shield": "Mean aggregation + acoustic + shield",
     }
     for variant in variants:
         seeds = variant["seeds"]

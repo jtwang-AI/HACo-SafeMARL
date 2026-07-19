@@ -1,2 +1,1 @@
-"""Pilot simulation package for HACo-SafeMARL experiments."""
-
+"""Planning-level simulation package for HACo-Safe experiments."""

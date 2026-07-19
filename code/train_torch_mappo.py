@@ -340,10 +340,16 @@ def main():
     parser.add_argument("--no-acoustic-features", action="store_true")
     parser.add_argument("--no-acoustic-reward", action="store_true")
     parser.add_argument("--disable-shield", action="store_true")
+    parser.add_argument(
+        "--no-graph-attention",
+        action="store_true",
+        help="replace learned graph attention with standard mean aggregation",
+    )
     args = parser.parse_args()
     args.use_acoustic = not args.no_acoustic_features
     args.use_acoustic_reward = not args.no_acoustic_reward
     args.use_shield = not args.disable_shield
+    args.use_attention = not args.no_graph_attention
 
     args.out.mkdir(parents=True, exist_ok=True)
     random.seed(args.seed)
@@ -354,13 +360,14 @@ def main():
 
     warm_params = load_warm_params(args.warm_policy)
     teacher = HACoSafeHeuristicPolicy(params=warm_params, name="haco_safemarl_teacher")
-    model = HACoActorCritic(hidden=args.hidden).to(device)
+    model = HACoActorCritic(hidden=args.hidden, use_attention=args.use_attention).to(device)
 
     run_config = {
         "policy_name": args.policy_name,
         "use_acoustic": args.use_acoustic,
         "use_acoustic_reward": args.use_acoustic_reward,
         "use_shield": args.use_shield,
+        "use_attention": args.use_attention,
         "seed": args.seed,
         "scenarios": args.scenarios,
         "eval_scenarios": args.eval_scenarios,

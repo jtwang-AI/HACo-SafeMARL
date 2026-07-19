@@ -164,9 +164,10 @@ class MLP(nn.Module):
 
 
 class HACoActorCritic(nn.Module):
-    def __init__(self, hidden: int = 128):
+    def __init__(self, hidden: int = 128, use_attention: bool = True):
         super().__init__()
         self.hidden = hidden
+        self.use_attention = use_attention
         self.usv_encoder = MLP(USV_FEATURE_DIM, hidden, hidden)
         self.auv_encoder = MLP(AUV_FEATURE_DIM, hidden, hidden)
         self.query = nn.Linear(hidden, hidden)
@@ -180,9 +181,14 @@ class HACoActorCritic(nn.Module):
     def means(self, usv_feat: torch.Tensor, auv_feat: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         usv_h = self.usv_encoder(usv_feat)
         auv_h = self.auv_encoder(auv_feat)
-        score = self.query(usv_h) @ self.key(auv_h).T / math.sqrt(float(self.hidden))
-        weight = torch.softmax(score, dim=-1)
-        auv_context = weight @ auv_h
+        if self.use_attention:
+            score = self.query(usv_h) @ self.key(auv_h).T / math.sqrt(float(self.hidden))
+            weight = torch.softmax(score, dim=-1)
+            auv_context = weight @ auv_h
+        else:
+            # Standard mean aggregation gives a comparably sized MAPPO baseline
+            # without the learned graph-attention mechanism.
+            auv_context = auv_h.mean(dim=0, keepdim=True)
         usv_mean = torch.tanh(self.usv_actor(torch.cat([usv_h, auv_context], dim=-1))) * USV_ACTION_SCALE
         usv_context = usv_h.expand(auv_h.shape[0], -1)
         auv_mean = torch.tanh(self.auv_actor(torch.cat([auv_h, usv_context], dim=-1))) * AUV_ACTION_SCALE
@@ -245,7 +251,8 @@ class TorchHACoPolicy(BasePolicy):
         hidden = int(payload.get("hidden", 128))
         args = payload.get("args", {})
         self.device = torch.device(device or ("cuda" if torch.cuda.is_available() else "cpu"))
-        self.model = HACoActorCritic(hidden=hidden).to(self.device)
+        use_attention = bool(args.get("use_attention", True))
+        self.model = HACoActorCritic(hidden=hidden, use_attention=use_attention).to(self.device)
         self.model.load_state_dict(payload["model_state"])
         self.model.eval()
         self.deterministic = deterministic

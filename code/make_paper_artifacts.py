@@ -28,8 +28,8 @@ POLICY_LABELS = {
     "communication_aware": "Comm.-aware",
     "haco_safemarl_pilot_no_acoustic": "HACo w/o acoustic",
     "haco_safemarl_pilot_no_shield": "HACo w/o shield",
-    "haco_safemarl_pilot": "HACo-SafeMARL",
-    "haco_safemarl_trained": "HACo-SafeMARL",
+    "haco_safemarl_pilot": "HACo-Safe",
+    "haco_safemarl_trained": "HACo-Safe",
 }
 
 POLICY_ORDER = [
@@ -63,7 +63,7 @@ METHOD_COLORS = {
     "Comm.-aware": "AICyan!70",
     "HACo w/o acoustic": "AIViolet!62",
     "HACo w/o shield": "AIRed!62",
-    "HACo-SafeMARL": "AITeal!86!black",
+    "HACo-Safe": "AITeal!86!black",
     "Balanced": "AIBlue!62",
 }
 
@@ -106,7 +106,7 @@ def generate_main_table(rows: list[dict[str, str]]) -> None:
     lines = [
         r"\begin{tabular}{lrrrrrrr}",
         r"\toprule",
-        r"Method & Success $\uparrow$ & Task $\uparrow$ & Outage $\downarrow$ & Worst pkt $\uparrow$ & AUV coll. $\downarrow$ & COLREGs $\downarrow$ & Shield $\downarrow$ \\",
+        r"Method & Success $\uparrow$ & Task $\uparrow$ & Outage $\downarrow$ & Worst pkt $\uparrow$ & AUV coll. $\downarrow$ & Crossing $\downarrow$ & Shield $\downarrow$ \\",
         r"\midrule",
     ]
     for policy in POLICY_ORDER:
@@ -463,7 +463,7 @@ def generate_training_curve_figure() -> None:
             fr"\draw[very thick,green!55!black] {best_path};",
             fr"\draw[very thick,blue!65,dashed] {mean_path};",
             fr"\node[draw,fill=white,anchor=north west,align=left] at (5.55,{height - 0.15:.2f}) {{\textcolor{{green!55!black}}{{best candidate}}\\\textcolor{{blue!65}}{{population mean}}}};",
-            fr"\node[anchor=north west,align=left,text width=8.2cm] at (0,-0.62) {{Warm-start policy optimization before graph-attention MAPPO fine-tuning. The curve reports the same constrained objective used by the simulator.}};",
+            fr"\node[anchor=north west,align=left,text width=8.2cm] at (0,-0.62) {{CEM gain tuning before graph-attention MAPPO fine-tuning. The curve reports the simulator's scalar planning objective.}};",
             r"\end{tikzpicture}",
             "",
         ]
@@ -509,7 +509,7 @@ def _summary_by_policy(rows: list[dict[str, str]]) -> dict[str, dict[str, float]
 def generate_ablation_figure(rows: list[dict[str, str]]) -> None:
     s = _summary_by_policy(rows)
     methods = [
-        ("haco_safemarl_trained", "HACo-SafeMARL"),
+        ("haco_safemarl_trained", "HACo-Safe"),
         ("haco_safemarl_pilot_no_acoustic", "w/o acoustic"),
         ("haco_safemarl_pilot_no_shield", "w/o shield"),
         ("balanced", "balanced pref."),

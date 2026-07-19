@@ -104,5 +104,11 @@ for seed in "${SEEDS[@]}"; do
   job_index=$((job_index + 1))
 done
 
+for seed in "${SEEDS[@]}"; do
+  gpu="${GPUS_ARR[$((job_index % ${#GPUS_ARR[@]}))]}"
+  launch_job "$gpu" "mappo_no_gat_acoustic_shield" "mappo_no_gat_acoustic_shield" "$seed" --no-graph-attention
+  job_index=$((job_index + 1))
+done
+
 wait
 python code/summarize_remote_review_experiments.py --root "$ROOT_OUT"
